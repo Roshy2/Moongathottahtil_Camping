@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Navigation";
+}
+
+    <ul>
+        <li class="nav_level1">@Html.ActionLink("Home", "index", "home")</li>
+        <li class="nav_level2">@Html.ActionLink("Über Uns", "about", "home")</li>
+        <li class="nav_level2">@Html.ActionLink("Impressum", "impressum", "home")</li>
+
+        <li class="nav_level1">@Html.ActionLink("Campingplatz", "index", "Campingplatz")</li>
+        <li class="nav_level2">@Html.ActionLink("Infos", "Infos", "Campingplatz")</li>
+        <li class="nav_level2">@Html.ActionLink("Preise", "Preise", "Campingplatz")</li>
+        <li class="nav_level2">@Html.ActionLink("Bilder", "Bilder", "Campingplatz")</li>
+
+        <li class="nav_level1">@Html.ActionLink("Reservierung", "index", "Reservierung")</li>
+        <li class="nav_level2">@Html.ActionLink("Anfrage", "Anfrage", "Reservierung")</li>
+
+    </ul>
