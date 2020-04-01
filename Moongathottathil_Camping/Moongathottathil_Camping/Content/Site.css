@@ -1,40 +1,9 @@
-﻿/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
- Set padding to keep content from hitting the edges 
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
- Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-
-.dl-horizontal dt {
-    white-space: normal;
-}
-
- Set width on the form input elements since they're 100% wide by default 
-input,
-select,
-textarea {
-    max-width: 280px;
-}*/
-body {
+﻿body {
     background-image: url("Images/Wallpaper.jpg");
-}
-#container {
-    min-width: 800px;
-    width: 80%;
-    margin: 0px auto;
-    background-color: #ffffff;
 }
 
 header {
     height: 180px;
-    /*border-bottom: 1px solid #b9aeae;*/
     background-image: url("Images/header.jpg");
     background-repeat: no-repeat;
     background-position: top;
@@ -45,7 +14,7 @@ nav {
     min-width: 140px;
     width: 15%;
     float: left;
-    min-height: 500px;
+    min-height: 800px;
     padding: 20px 5px 10px 10px;
     display: block;
     color: black;
@@ -101,4 +70,13 @@ h2 ,h3{
 }
 table{
     background-color: white;
+}
+.col-container {
+    display: table;
+    width: 100%;
+}
+
+.col {
+    display: table-cell;
+    padding: 16px;
 }
