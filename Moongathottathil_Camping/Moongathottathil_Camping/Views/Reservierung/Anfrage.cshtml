@@ -1,8 +1,85 @@
-﻿
+﻿@model Moongathottathil_Camping.Models.Campingplatzreservierung
 @{
     ViewBag.Title = "Anfrage";
 }
 
 <h2>Anfrage</h2>
 
-<p>Test</p>
+@using (Html.BeginForm())
+{
+    <p>
+        <!-- @Html.ValidationSummary() -->
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2">Registrierungsdaten</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(u => u.Vorname, "Vorname:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Vorname, new { required = "required" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Nachname, "Nachname:* ")</td>
+                <td>
+                    @Html.TextBoxFor(u => u.Nachname, new { required = "required" })<br />
+                    <span class="errorForm">
+                        @Html.ValidationMessageFor(u => u.Nachname)
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Geburtsdatum, "Geburtsdatum: ")</td>
+                <td>@Html.TextBoxFor(u => u.Geburtsdatum, new { type = "date" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Von, "Von:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Von, new { type = "date" })</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(u => u.Bis, "Bis:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Bis, new { type = "date" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Strasse, "Strasse:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Strasse, new { required = "required" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Plz, "PLZ:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Plz, new { required = "required" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Ort, "Ort:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Ort, new { required = "required" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Telefonnummer, "Telefonnummer: ")</td>
+                <td>@Html.TextBoxFor(u => u.Telefonnummer)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Email, "Email:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Email, new { required = "required" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(u => u.Reservierplatz, "Reservierplatz:* ")</td>
+                <td>@Html.TextBoxFor(u => u.Reservierplatz, new { required = "required" })</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">
+                    <input type="submit" value="absenden" id="btnSubmit" />
+                    <input type="reset" value="abbrechen" id="btnReset" />
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">* sind Pflichtfelder</td>
+            </tr>
+        </tfoot>
+
+
+    </table>
+}

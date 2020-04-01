@@ -27,7 +27,7 @@ content {
     min-width: 500px;
     width: 85%;
     float: left;
-    min-height: 500px;
+    min-height: 800px;
     padding: 10px;
     background-color: #404040;
 }
@@ -68,9 +68,7 @@ p{
 h2 ,h3{
     color: black;
 }
-table{
-    background-color: white;
-}
+
 .col-container {
     display: table;
     width: 100%;
@@ -79,4 +77,44 @@ table{
 .col {
     display: table-cell;
     padding: 16px;
+}
+table {
+    margin: 60px auto;
+    background-color: white;
+}
+
+thead {
+    text-align: center;
+    background-color: #af0707;
+    color: white;
+    font-size: 1.2em;
+}
+
+    thead tr:first-child {
+        border-bottom: 2px solid white;
+    }
+
+tfoot {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+td {
+    padding: 5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid black;
+}
+
+input {
+    border-radius: 7px;
+    height: 2.2em;
+    border: 1px solid #7a7575;
+    width: 260px;
+}
+
+.errorForm {
+    color: red;
+    font-size: 0.8em;
 }
