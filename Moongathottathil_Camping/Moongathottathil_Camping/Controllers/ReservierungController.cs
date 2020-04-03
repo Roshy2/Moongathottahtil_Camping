@@ -66,22 +66,22 @@ namespace Moongathottathil_Camping.Controllers
             {
                 ModelState.AddModelError("Nachname", "Nachname ist ein Pflichtfeld.");
             }
-            //if (DateTime.IsNullOrEmpty(campres.Von.Trim()))
-            //{
-            //    ModelState.AddModelError("Von", "Von ist ein Pflichtfeld.");
-            //}
-            //if (DateTime.IsNullOrEmpty(campres.Bis.Trim()))
-            //{
-            //    ModelState.AddModelError("Bis", "Bis ist ein Pflichtfeld.");
-            //}
+            if ((campres.Von == null) || (DateTime.Now > campres.Von))
+            {
+                ModelState.AddModelError("Von", "Von ist ein Pflichtfeld.");
+            }
+            if ((campres.Bis == DateTime.MinValue) || (campres.Bis < campres.Von))
+            {
+                ModelState.AddModelError("Bis", "Bis ist ein Pflichtfeld.");
+            }
             if (string.IsNullOrEmpty(campres.Strasse.Trim()))
             {
                 ModelState.AddModelError("Strasse", "Strasse ist ein Pflichtfeld.");
             }
-            //if (int(campres.Plz.()))
-            //{
-            //    ModelState.AddModelError("Plz", "Plz ist ein Pflichtfeld.");
-            //}
+            if ((campres.Plz <999) || (campres.Plz >100000))
+            {
+                ModelState.AddModelError("Plz", "Plz ist ein Pflichtfeld.");
+            }
             if (string.IsNullOrEmpty(campres.Ort.Trim()))
             {
                 ModelState.AddModelError("Ort", "Ort ist ein Pflichtfeld.");
